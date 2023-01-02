@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Protfolio Website - Subha Mal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <class class="container">
+        <nav>
+          <img src="img/logo2.png" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Web Developer</p>
+          <h1>
+            Hi, I'm <span>Subha</span><br />
+            from Kolkata
+          </h1>
+        </div>
+      </class>
+    </div>
+    <!-- -----------------------< About >--------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="img/user2.jpeg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hello I am Subha Mal . Currently I am persuing B.Tech in Computer
+              Science & Engineering. I have intermidiate Knowladge about HTML &
+              CSS for Develop the websites . Also I am a freelance video editor.
+              I use Premier Pro for edit high quality videos
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link">
+                <button onclick="opentab('skills')">Skills</button>
+              </p>
+              <p class="tab-links">
+                <button onclick="opentab('projects')">Projects</button>
+              </p>
+              <p class="tab-links">
+                <button onclick="opentab('education')">Education</button>
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />
+                  Web app development
+                </li>
+                <li>
+                  <span>Premier Pro</span><br />
+                  Edit Videos
+                </li>
+                <li>
+                  <span>Developer</span><br />
+                  Learing developing kits
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="projects">
+              <ul>
+                <li>
+                  <span>E-comerce Website</span><br />
+                  Web app development for E-comerce site
+                </li>
+                <li>
+                  <span>Predict the Number</span><br />
+                  make Game through c++
+                </li>
+                <li>
+                  <span>Freelance Video Edit</span><br />
+                  Work on So many project for video editing
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>B.Tech</span><br />
+                  Currently I am persuing this course (2020-2024)
+                </li>
+                <li>
+                  <span>Higher Secondary</span><br />
+                  (2019-2020) with marks of 78.6%
+                </li>
+                <li>
+                  <span>Secondary</span><br />
+                  (2017-2018) with the marks of 72.4%
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classlist.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontents.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-link");
+      }
+    </script>
+  </body>
+</html>
